@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1415075160 source:e:\codeblockside\heapsort\main.cpp
+	<iostream>
+
+1415201235 source:f:\baiduyundownload\heapsort\main.cpp
+	<iostream>
+	"HeapSort.h"
+	<stdlib.h>
+
+1415200633 source:f:\baiduyundownload\heapsort\src\heapsort.cpp
+	"HeapSort.h"
+
+1415200430 f:\baiduyundownload\heapsort\include\heapsort.h
+	<iostream>
+	<vector>
+
