@@ -6,20 +6,22 @@ using namespace std;
 int main()
 {
     cout << "Heap Sort" << endl;
+
     HeapSortArray sortArr;    //Get a instance
 
+    //生成测试随机数
     int _random = 0;
     int i = 0;
-    for(; i < 1000; i++) {
+    for(; i < 100; i++) {
         _random = 1 + rand() % 100;
         sortArr.Add(_random);
+        cout<<"raw"<<i<<":"<<_random<<endl;
     }
-    int j = 0;
-    int item = 0;
-    for(; j < sortArr.Length(); j++) {
-        item = sortArr.Get(i);
-        cout<<"num"<<i<<":"<<item<<endl;
-    }
+
+    //排序
+    sortArr.Sort();
+    //打印排序结果
+    sortArr.Printf();
 
     return 0;
 }

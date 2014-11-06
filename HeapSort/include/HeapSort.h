@@ -25,24 +25,24 @@ THE SOFTWARE.
 */
 #include <iostream>
 using namespace std;
-
 #include <vector>
 
 class HeapSortArray
 {
     public:
         HeapSortArray();
-        void Sort(void);      /* 排序 */
         virtual ~HeapSortArray();
+        void Sort(void);                 /* 排序 */
         void Add(int a);                 /* 添加元素 */
         int Get(int index);              /* 获取index位置的元素 */
         int Length(void);                /* 获取Array中的元素个数 */
+        void Printf(void);               /* 打印输出 */
     protected:
     private:
         vector<int> _sortArray;
-        void maxHeapify(vector<int> a, int root, int len);    /* 维护最大堆性质 */
-        void buildMaxHeap(vector<int> a);    /* 建立最大堆 */
-        void _swap(int* a, int* b);            /* 引用调用 */
+        void maxHeapify(vector<int> &a, int root, int heap_size);    /* 维护最大堆性质 */
+        void buildMaxHeap(vector<int> &a);                           /* 建立最大堆 */
+        void _swap(int* a, int* b);                                  /* 交换 */
 };
 
 #endif // HEAPSORT_H
