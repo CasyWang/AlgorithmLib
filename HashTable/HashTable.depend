@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1417596071 source:e:\codeblockside\hashtable\main.cpp
+	<iostream>
+	<HashTable.h>
+
+1417587277 source:e:\codeblockside\hashtable\src\hashtable.cpp
+	"HashTable.h"
+
+1417596124 e:\codeblockside\hashtable\include\hashtable.h
+	<iostream>
+	<string>
+	<stdlib.h>
+
