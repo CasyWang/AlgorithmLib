@@ -74,7 +74,7 @@ class HashTable
         /* insert a key value pair */
         void Add(string key, Object value) {
             /* find the same key */
-            if(LookUp(key) != NULL)
+            if(Contain(key))
                 return;
 
             list_t *node = new list_t;      /* instance a new link node */
@@ -88,8 +88,20 @@ class HashTable
 
         }
 
+        /* determine if the table contains one key */
+        bool Contain(string key) {
+            unsigned int hash_val = Hash(key);
+            list_t *node = NULL;
+            for(node = table[hash_val]; node != NULL; node = node->next) {
+                if(key.compare(node->key) == 0)
+                    return true;
+            }
+            return false;
+        }
+
         /* look up key */
         Object LookUp(string key) {
+            Object obj;
             unsigned int hash_val = Hash(key);
             list_t *node = NULL;
             for(node = table[hash_val]; node != NULL; node = node->next) {
@@ -97,7 +109,7 @@ class HashTable
                     break;
             }
 
-            return (node ? node->value : NULL);
+            return (node ? node->value : obj);         //TODO: Need return according to template
         }
 
 };
